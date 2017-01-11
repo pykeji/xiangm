@@ -226,3 +226,57 @@ INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000276s ]
 ERR: 无法加载模块:Public
 
+[ 2017-01-11T09:47:47+08:00 ] ::1 /work/Public/js/echarts.simple.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+ERR: 无法加载模块:Public
+
+[ 2017-01-11T09:47:47+08:00 ] ::1 /work/Public/js/echarts.simple.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000239s ]
+ERR: 无法加载模块:Public
+
+[ 2017-01-11T09:47:47+08:00 ] ::1 /work/Public/muban/assets/fonts/open-sans-bold.woff
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000414s ]
+ERR: 无法加载模块:Public
+
+[ 2017-01-11T09:47:53+08:00 ] ::1 /work/Public/js/echarts.simple.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000291s ]
+ERR: 无法加载模块:Public
+
+[ 2017-01-11T09:47:53+08:00 ] ::1 /work/Public/muban/assets/fonts/open-sans-bold.woff
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000314s ]
+ERR: 无法加载模块:Public
+
+[ 2017-01-11T09:48:01+08:00 ] ::1 /work/Public/muban/assets/fonts/open-sans-bold.woff
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+ERR: 无法加载模块:Public
+
+[ 2017-01-11T09:48:02+08:00 ] ::1 /work/Public/muban/assets/fonts/open-sans-bold.woff
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000319s ]
+ERR: 无法加载模块:Public
+
+[ 2017-01-11T09:48:46+08:00 ] ::1 /work/Public/muban/assets/fonts/open-sans-bold.woff
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000322s ]
+ERR: 无法加载模块:Public
+
+[ 2017-01-11T09:48:48+08:00 ] ::1 /work/Public/muban/assets/fonts/open-sans-bold.woff
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000277s ]
+ERR: 无法加载模块:Public
+

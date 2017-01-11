@@ -8,18 +8,20 @@
 <meta name="author" content="">
 <!-- Le styles -->
 
-	<!-- 自己写的css -->
-	<link rel="stylesheet" type="text/css" href="/work/Public/yeMiancss/binglicx.css">
-	<!-- 日历的js -->
-	<script type="text/javascript" src="/work/Public/rili/jeDate/jedate.js"></script>
-	<!-- 健康档案 -->
-	<link rel="stylesheet" href="/work/Public/mrjkda/jkda.css">
-    <link rel="stylesheet" href="/work/Public/mrjkda/jiankang.css">
-    <script src="/work/Public/mrjkda/Birthday-Calendar.js"></script>
 
-<link rel="stylesheet" href="/work/Public/muban/assets/css/style.css">
-<link rel="stylesheet" href="/work/Public/muban/assets/css/loader-style.css">
-<link rel="stylesheet" href="/work/Public/muban/assets/css/bootstrap.css">
+<link rel="stylesheet" href="/TP3.2.3pykj/Public/muban/assets/css/style.css">
+<link rel="stylesheet" href="/TP3.2.3pykj/Public/muban/assets/css/loader-style.css">
+<link rel="stylesheet" href="/TP3.2.3pykj/Public/muban/assets/css/bootstrap.css">
+
+	<!-- 自己写的css -->
+	<link rel="stylesheet" type="text/css" href="/TP3.2.3pykj/Public/yeMiancss/binglicx.css">
+	<!-- 日历的js -->
+	<script type="text/javascript" src="/TP3.2.3pykj/Public/rili/jeDate/jedate.js"></script>
+	<!-- 健康档案 -->
+	<link rel="stylesheet" href="/TP3.2.3pykj/Public/mrjkda/jkda.css">
+    <link rel="stylesheet" href="/TP3.2.3pykj/Public/mrjkda/jiankang.css">
+    <script src="/TP3.2.3pykj/Public/mrjkda/Birthday-Calendar.js"></script>
+
 
 <style type="text/css">
 	/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/  
@@ -41,7 +43,9 @@
 		{  
 		    border-radius: 10px;  
 		 	-webkit-box-shadow: inset 0 0 6px #8CA8E0;  
-		    background-color: #2A3F6A;  
+
+		    background-color: #2A3F6A;
+
 		} */ 
 </style>
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -49,7 +53,7 @@
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 <!-- Fav and touch icons -->
-<link rel="shortcut icon" href="/work/Public/muban/assets/ico/minus.png">
+<link rel="shortcut icon" href="/TP3.2.3pykj/Public/muban/assets/ico/minus.png">
 </head>
 <body>
 <!-- 开始头 -->
@@ -113,7 +117,7 @@
 				<!-- 个人信息 -->
 				<li>
 					<a data-toggle="dropdown" class="dropdown-toggle" href="#">
-					<img alt="" class="admin-pic img-circle" src="/work/Public/muban/assets/img/canga.jpg">
+					<img alt="" class="admin-pic img-circle" src="/TP3.2.3pykj/Public/muban/assets/img/canga.jpg">
 					Hi, 帅气的xxoo <b class="caret"></b>
 					</a>
 					<ul style="margin-top:14px;" role="menu" class="dropdown-setting dropdown-menu">
@@ -176,7 +180,7 @@
 <div id="skin-select">
 	<!-- logo -->
 	<div style=" margin-top:-20px; " >
-		<img src="/work/Public/muban/assets/img/pengyu1.png"  alt="logo" style="  width: 150px; margin-left:30px; ">
+		<img src="/TP3.2.3pykj/Public/muban/assets/img/pengyu1.png"  alt="logo" style="  width: 150px; margin-left:30px; ">
 	</div>
 	<!-- 显示隐藏的图标 -->
 	<a id="toggle">
@@ -202,32 +206,40 @@
 						</a>
 						<ul>
 							<li>
-							<a class="tooltip-tip2 ajax-load" href="blog-list.html" title="自己登记">
-								&nbsp; &nbsp; &nbsp; &nbsp; <i class="entypo-doc-text"></i><span>患者登记</span></a>
+								<a class="tooltip-tip2 ajax-load" href="<?php echo U('Index/home','');?>" title="接诊区">
+									&nbsp;&nbsp;<i class="entypo-doc-text"></i><span>接诊区</span></a>
 							</li>
 							<li>
-							<a class="tooltip-tip2 ajax-load" href="blog-detail.html" title="历史登记">
-								&nbsp; &nbsp; &nbsp; &nbsp; <i class="entypo-newspaper"></i><span>患者预约</span></a>
+								<a class="tooltip-tip2 ajax-load" href="<?php echo U('Index/dengji','');?>" title="自己登记">
+								&nbsp;&nbsp;<i class="entypo-doc-text"></i><span>患者登记</span></a>
 							</li>
 							<li>
-							<a class="tooltip-tip2 ajax-load" href="blog-detail.html" title="历史登记">
-								&nbsp; &nbsp; &nbsp; &nbsp; <i class="entypo-newspaper"></i><span>查询</span></a>
+								<a class="tooltip-tip2 ajax-load" href="<?php echo U('Index/yuyue','');?>" title="患者预约">
+								&nbsp;&nbsp;<i class="entypo-newspaper"></i><span>患者预约</span></a>
+							</li>
+							<li>
+								<a class="tooltip-tip2 ajax-load" href="<?php echo U('Index/chaxun','');?>" title="查询">
+								&nbsp;&nbsp;<i class="entypo-newspaper"></i><span>查询</span></a>
 							</li>
 						</ul>
 					</li>
 					<li>
 						<a class="tooltip-tip ajax-load" href="#" title="健康档案">
-						<i class="icon-feed"></i>
+						<i class="icon-document-edit"></i>
 						<span>健康档案</span>
 						</a>
 						<ul>
 							<li>
-							<a class="tooltip-tip2 ajax-load" href="blog-list.html" title="自己登记">
-								&nbsp; &nbsp; &nbsp; &nbsp; <i class="entypo-doc-text"></i><span>体质辨识</span></a>
+								<a class="tooltip-tip2 ajax-load" href="<?php echo U('Index/jiankang','');?>" title="健康档案">
+								&nbsp;&nbsp;<i class="entypo-doc-text"></i><span>健康档案</span></a>
 							</li>
 							<li>
-							<a class="tooltip-tip2 ajax-load" href="blog-detail.html" title="历史登记">
-								&nbsp; &nbsp; &nbsp; &nbsp; <i class="entypo-newspaper"></i><span>中医调养</span></a>
+								<a class="tooltip-tip2 ajax-load" href="<?php echo U('Index/tizhi','');?>" title="体质辨识">
+								&nbsp;&nbsp;<i class="entypo-doc-text"></i><span>体质辨识</span></a>
+							</li>
+							<li>
+								<a class="tooltip-tip2 ajax-load" href="<?php echo U('Index/tiaoyang','');?>" title="中医调养">
+								&nbsp;&nbsp;<i class="entypo-newspaper"></i><span>中医调养</span></a>
 							</li>
 						</ul>
 					</li>
@@ -1062,7 +1074,7 @@
 	</div>
 	<!-- 清除浮动 -->
 	<div class="qingchudakfd"></div>
-    <script src="/work/Public/mrjkda/bingshi.js"></script>
+    <script src="/TP3.2.3pykj/Public/mrjkda/bingshi.js"></script>
 
 	<!-- 日历的js -->
 	<script type="text/javascript">
@@ -1197,7 +1209,7 @@
     </div>
 
     <!-- 结束 最右侧隐藏的菜单-->
-    <script type="text/javascript" src="/work/Public/muban/assets/js/jquery.js"></script>
+    <script type="text/javascript" src="/TP3.2.3pykj/Public/muban/assets/js/jquery.js"></script>
     <!-- <script src="assets/js/progress-bar/src/jquery.velocity.min.js"></script> -->
     <!-- <script src="assets/js/progress-bar/number-pb.js"></script> -->
     <!-- <script src="assets/js/progress-bar/progress-app.js"></script> -->
@@ -1206,14 +1218,16 @@
 
     <!-- MAIN EFFECT -->
     <!-- <script type="text/javascript" src="assets/js/preloader.js"></script> -->
-    <script type="text/javascript" src="/work/Public/muban/assets/js/bootstrap.js"></script>
-    <script type="text/javascript" src="/work/Public/muban/assets/js/app.js"></script>
-    <script type="text/javascript" src="/work/Public/muban/assets/js/load.js"></script>
-    <script type="text/javascript" src="/work/Public/muban/assets/js/main.js"></script>
-
+    <script type="text/javascript" src="/TP3.2.3pykj/Public/muban/assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/TP3.2.3pykj/Public/muban/assets/js/app.js"></script>
+    <script type="text/javascript" src="/TP3.2.3pykj/Public/muban/assets/js/load.js"></script>
+    <script type="text/javascript" src="/TP3.2.3pykj/Public/muban/assets/js/main.js"></script>
+	<script src="/TP3.2.3pykj/Public/js/shijian.js"></script>
+	<!--<script src="/TP3.2.3pykj/Public/js/bingshi.js"></script>-->
+	
 <div style="text-align:center;">
-<p>Health home <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">健康之家</a>
- - Peng yu companies <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">鹏宇公司</a></p>
+<p>Health home <a href="http://www.cssmoban.com/" target="_blank" title="模板之家" style="color: #9ea7b3;">健康之家</a>
+ - Peng yu companies <a href="http://www.cssmoban.com/" title="网页模板" target="_blank" style="color: #9ea7b3;">鹏宇公司</a></p>
 </div>
 </body>
 

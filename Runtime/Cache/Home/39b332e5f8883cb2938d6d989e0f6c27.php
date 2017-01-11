@@ -2,15 +2,21 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>中医辅助开方</title>
+
+	<title>患者登记</title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="">
 <!-- Le styles -->
 
+
 <link rel="stylesheet" href="/work/Public/muban/assets/css/style.css">
 <link rel="stylesheet" href="/work/Public/muban/assets/css/loader-style.css">
 <link rel="stylesheet" href="/work/Public/muban/assets/css/bootstrap.css">
+
+	<link rel="stylesheet" href="/work/Public/css/jiezhen.css">
+
 
 <style type="text/css">
 	/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/  
@@ -32,7 +38,9 @@
 		{  
 		    border-radius: 10px;  
 		 	-webkit-box-shadow: inset 0 0 6px #8CA8E0;  
-		    background-color: #2A3F6A;  
+
+		    background-color: #2A3F6A;
+
 		} */ 
 </style>
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -193,32 +201,40 @@
 						</a>
 						<ul>
 							<li>
-							<a class="tooltip-tip2 ajax-load" href="blog-list.html" title="自己登记">
-								&nbsp; &nbsp; &nbsp; &nbsp; <i class="entypo-doc-text"></i><span>患者登记</span></a>
+								<a class="tooltip-tip2 ajax-load" href="<?php echo U('Index/home','');?>" title="接诊区">
+									&nbsp;&nbsp;<i class="entypo-doc-text"></i><span>接诊区</span></a>
 							</li>
 							<li>
-							<a class="tooltip-tip2 ajax-load" href="blog-detail.html" title="历史登记">
-								&nbsp; &nbsp; &nbsp; &nbsp; <i class="entypo-newspaper"></i><span>患者预约</span></a>
+								<a class="tooltip-tip2 ajax-load" href="<?php echo U('Index/dengji','');?>" title="自己登记">
+								&nbsp;&nbsp;<i class="entypo-doc-text"></i><span>患者登记</span></a>
 							</li>
 							<li>
-							<a class="tooltip-tip2 ajax-load" href="blog-detail.html" title="历史登记">
-								&nbsp; &nbsp; &nbsp; &nbsp; <i class="entypo-newspaper"></i><span>查询</span></a>
+								<a class="tooltip-tip2 ajax-load" href="<?php echo U('Index/yuyue','');?>" title="患者预约">
+								&nbsp;&nbsp;<i class="entypo-newspaper"></i><span>患者预约</span></a>
+							</li>
+							<li>
+								<a class="tooltip-tip2 ajax-load" href="<?php echo U('Index/chaxun','');?>" title="查询">
+								&nbsp;&nbsp;<i class="entypo-newspaper"></i><span>查询</span></a>
 							</li>
 						</ul>
 					</li>
 					<li>
 						<a class="tooltip-tip ajax-load" href="#" title="健康档案">
-						<i class="icon-feed"></i>
+						<i class="icon-document-edit"></i>
 						<span>健康档案</span>
 						</a>
 						<ul>
 							<li>
-							<a class="tooltip-tip2 ajax-load" href="blog-list.html" title="自己登记">
-								&nbsp; &nbsp; &nbsp; &nbsp; <i class="entypo-doc-text"></i><span>体质辨识</span></a>
+								<a class="tooltip-tip2 ajax-load" href="<?php echo U('Index/jiankang','');?>" title="健康档案">
+								&nbsp;&nbsp;<i class="entypo-doc-text"></i><span>健康档案</span></a>
 							</li>
 							<li>
-							<a class="tooltip-tip2 ajax-load" href="blog-detail.html" title="历史登记">
-								&nbsp; &nbsp; &nbsp; &nbsp; <i class="entypo-newspaper"></i><span>中医调养</span></a>
+								<a class="tooltip-tip2 ajax-load" href="<?php echo U('Index/tizhi','');?>" title="体质辨识">
+								&nbsp;&nbsp;<i class="entypo-doc-text"></i><span>体质辨识</span></a>
+							</li>
+							<li>
+								<a class="tooltip-tip2 ajax-load" href="<?php echo U('Index/tiaoyang','');?>" title="中医调养">
+								&nbsp;&nbsp;<i class="entypo-newspaper"></i><span>中医调养</span></a>
 							</li>
 						</ul>
 					</li>
@@ -387,7 +403,86 @@
 		<!-- 这写主题 -->
 		<!-- <div> -->
 			
-	<p style="margin-left: 300px;">啦啦啦德玛西亚</p>
+	<div class="bg">
+		<div class="title center">接诊区</div>
+		<div class="yuyue">
+			<div>
+				<!--<img src="/work/Public/img/014.png" alt="图片加载失败！">-->
+			</div>
+			<div class="yyfont">
+				预约病人列表
+			</div>
+			<div class="yychecked">
+				<select name="yydate">
+					<option value="today">当日</option>
+					<option value="tomorrow">明日</option>
+					<option value="afterTomo">后日</option>
+					<option value="all">全部</option>
+					<option value="lastWeek">上周内未完成就诊</option>
+				</select>
+			</div>
+			<div class="nowdate">
+				<span>当前日期：</span>
+				<span id="dqrq"></span>
+			</div>
+		</div>
+		<div class="yyinf center">
+			<div class="yytab">
+				<table border="0" width="100%">
+					<tr>
+						<th width="10%">预约日期</th>
+						<th width="5%">姓名</th>
+						<th width="3%">性别</th>
+						<th width="4%">年龄</th>
+						<!--<th width="8%">出生日期</th>-->
+						<!--<th width="10%">身份证号</th>-->
+						<th width="8%">电话</th>
+						<!--<th width="20%">单位</th>-->
+						<!--<th width="10%">传真</th>-->
+						<!--<th width="12%">E-Mail</th>-->
+						<th width="12%">操作</th>
+					</tr>
+					<tr class="sty1" name="tableSty">
+						<td>2016-11-28 11:03:03</td>
+						<td>阿布</td>
+						<td>男</td>
+						<td>36岁</td>
+						<!--<td>1980-01-01</td>-->
+						<!--<td>130185111111111111</td>-->
+						<td>18333333333</td>
+						<!--<td>河北省石家庄市睿和中心河北鹏宇电子科技有限公司</td>-->
+						<!--<td>86519-85125379</td>-->
+						<!--<td>xmr93213@qq.com</td>-->
+						<td>
+							<span>详细信息</span>
+							<span>就诊</span>
+							<span>修改</span>
+							<span>收费</span>
+						</td>
+					</tr>
+					<tr class="sty1" name="tableSty">
+						<td>2016-11-28 11:03:03</td>
+						<td>阿布</td>
+						<td>男</td>
+						<td>36岁</td>
+						<td>18333333333</td>
+						<td>
+							<span>详细信息</span>
+							<span>就诊</span>
+							<span>修改</span>
+							<span>收费</span>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="yytj">
+				<span>共<span id="sickNum">0</span>位病人登记</span>
+				<span>当前第1/N页</span>
+				<span>上一页</span>
+				<span>下一页</span>
+			</div>
+		</div>
+	</div>
 
 		<!-- </div> -->
     </div>
@@ -515,10 +610,12 @@
     <script type="text/javascript" src="/work/Public/muban/assets/js/app.js"></script>
     <script type="text/javascript" src="/work/Public/muban/assets/js/load.js"></script>
     <script type="text/javascript" src="/work/Public/muban/assets/js/main.js"></script>
-
+	<script src="/work/Public/js/shijian.js"></script>
+	<!--<script src="/work/Public/js/bingshi.js"></script>-->
+	
 <div style="text-align:center;">
-<p>Health home <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">健康之家</a>
- - Peng yu companies <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">鹏宇公司</a></p>
+<p>Health home <a href="http://www.cssmoban.com/" target="_blank" title="模板之家" style="color: #9ea7b3;">健康之家</a>
+ - Peng yu companies <a href="http://www.cssmoban.com/" title="网页模板" target="_blank" style="color: #9ea7b3;">鹏宇公司</a></p>
 </div>
 </body>
 
